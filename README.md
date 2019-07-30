@@ -25,19 +25,35 @@ top, and I'm guessing Rollup is having trouble determining side-effects.
 This project is configured using
 [Yarn Workspaces](https://yarnpkg.com/lang/en/docs/workspaces/) where the root
 directory is the library created with `tsdx` (named `tsdx-treeshaking-test`) and
-the `consumer` directory is a bare bones [Gatsby](https://www.gatsbyjs.org/)
-project that imports the `Thing1` component from `tsdx-treeshaking-test`.
+several consuming projects live under the `consumers` directory:
+
+- [cra](https://github.com/facebook/create-react-app#readme)
+- [gatsby](https://www.gatsbyjs.org/)
+- [parcel](https://parceljs.org/)
+
+Each consumer consists of a simple index page that simply imports the `Thing1`
+component from `tsdx-treeshaking-test`.
 
 ### Analyze
 
-To observe the issue, run the following:
+To observe the issue in the Gatsby consumer project, run the following:
 
 ```sh
 yarn
 yarn analyze
 ```
 
-This will build the component library with `tsdx`, then build the Gatsby
-consumer site, and finally open the Webpack Bundle Analyzer for the production
-Gatsby build at `http://127.0.0.1:8888/`. You can then use the "search modules"
-functionality to search for "emotion" (you don't want to find it, but you will).
+This will build the component library with `tsdx`, then build the Gatsby site,
+and finally open the Webpack Bundle Analyzer for the production Gatsby build at
+`http://127.0.0.1:8888/`. You can then use the "search modules" functionality to
+search for "emotion" (you don't want to find it, but you will).
+
+You can observe the issue in the other consumer projects by building them and
+either noting the bundle size and/or `grep`ing through the output for
+"`emotion`".
+
+- `yarn workspace consumer-cra build`
+- `yarn workspace consumer-parcel build`
+
+If you comment out the `Thing1` import in any of the examples and rebuild,
+Emotion will not show up in the output.
