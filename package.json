@@ -43,8 +43,7 @@
     "typescript": "3.5.3"
   },
   "dependencies": {
-    "@emotion/core": "10.0.14",
-    "@emotion/styled": "10.0.14"
+    "@emotion/core": "10.0.14"
   },
   "private": true,
   "workspaces": [
