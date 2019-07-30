@@ -9,7 +9,7 @@
     "dist"
   ],
   "scripts": {
-    "analyze": "yarn build && yarn workspace consumer build",
+    "analyze": "yarn build && yarn workspace consumer-gatsby build",
     "start": "tsdx watch",
     "build": "tsdx build",
     "test": "tsdx test --env=jsdom"
@@ -47,7 +47,7 @@
   },
   "private": true,
   "workspaces": [
-    "consumer",
+    "consumers/*",
     "."
   ]
 }
