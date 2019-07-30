@@ -10,14 +10,15 @@ accordingly.
 ### Desired Behavior
 
 I was hoping consuming projects that only import `Thing1` would not see `Thing2`
-(and Emotion) in their bundle.
+nor Emotion in their bundle.
 
 ### Observed Behavior
 
-Importing `Thing1` also includes `Thing2` (and Emotion) in the resulting
-consumer bundle. Inspecting `dist/tsdx-treeshaking-test.esm.js` reveals all the
-components (and their dependencies) are in a single file, and I'm guessing
-Rollup is having trouble determining side-effects.
+Importing only `Thing1` does eliminate `Thing2` (good) but Emotion still is
+included in the resulting consumer bundle (bad). Inspecting
+`dist/tsdx-treeshaking-test.esm.js` reveals all the components (and their
+dependencies) are in this single file with their dependencies imported at the
+top, and I'm guessing Rollup is having trouble determining side-effects.
 
 ## Try it yourself
 
@@ -39,4 +40,4 @@ yarn analyze
 This will build the component library with `tsdx`, then build the Gatsby
 consumer site, and finally open the Webpack Bundle Analyzer for the production
 Gatsby build at `http://127.0.0.1:8888/`. You can then use the "search modules"
-functionality to search for "emotion" (you don't want to find it).
+functionality to search for "emotion" (you don't want to find it, but you will).
