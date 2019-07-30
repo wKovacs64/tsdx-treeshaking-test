@@ -3,38 +3,23 @@
   "warnings": [],
   "namedChunkGroups": {
     "app": {
-      "chunks": [4, 1],
+      "chunks": [2, 0],
       "assets": [
-        "webpack-runtime-9ddbdac6ae6d8ee393a0.js",
-        "webpack-runtime-9ddbdac6ae6d8ee393a0.js.map",
-        "app-e153844f5da8bbb50299.js",
-        "app-e153844f5da8bbb50299.js.map"
-      ],
-      "children": {},
-      "childAssets": {}
-    },
-    "component---src-pages-404-js": {
-      "chunks": [0, 2],
-      "assets": [
-        "styles.fc4fa5e094d218207796.css",
-        "styles-4730c913c01f3bb20064.js",
-        "styles-4730c913c01f3bb20064.js.map",
-        "component---src-pages-404-js-a491c029ad7e16c7f1da.js",
-        "component---src-pages-404-js-a491c029ad7e16c7f1da.js.map"
+        "webpack-runtime-d962de52d9300131611f.js",
+        "webpack-runtime-d962de52d9300131611f.js.map",
+        "app-793f466fc4c95747420b.js",
+        "app-793f466fc4c95747420b.js.map"
       ],
       "children": {},
       "childAssets": {}
     },
     "component---src-pages-index-js": {
-      "chunks": [0, 5, 3],
+      "chunks": [3, 1],
       "assets": [
-        "styles.fc4fa5e094d218207796.css",
-        "styles-4730c913c01f3bb20064.js",
-        "styles-4730c913c01f3bb20064.js.map",
-        "5-38f6d34988307b27c7bd.js",
-        "5-38f6d34988307b27c7bd.js.map",
-        "component---src-pages-index-js-ccc5fa7db3b69d493d42.js",
-        "component---src-pages-index-js-ccc5fa7db3b69d493d42.js.map"
+        "3-cd2eee998d9786507cb8.js",
+        "3-cd2eee998d9786507cb8.js.map",
+        "component---src-pages-index-js-0c6ea46ed618470b086c.js",
+        "component---src-pages-index-js-0c6ea46ed618470b086c.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -42,19 +27,12 @@
   },
   "assetsByChunkName": {
     "app": [
-      "webpack-runtime-9ddbdac6ae6d8ee393a0.js",
-      "app-e153844f5da8bbb50299.js"
-    ],
-    "component---src-pages-404-js": [
-      "styles.fc4fa5e094d218207796.css",
-      "styles-4730c913c01f3bb20064.js",
-      "component---src-pages-404-js-a491c029ad7e16c7f1da.js"
+      "webpack-runtime-d962de52d9300131611f.js",
+      "app-793f466fc4c95747420b.js"
     ],
     "component---src-pages-index-js": [
-      "styles.fc4fa5e094d218207796.css",
-      "styles-4730c913c01f3bb20064.js",
-      "5-38f6d34988307b27c7bd.js",
-      "component---src-pages-index-js-ccc5fa7db3b69d493d42.js"
+      "3-cd2eee998d9786507cb8.js",
+      "component---src-pages-index-js-0c6ea46ed618470b086c.js"
     ]
   }
 }
